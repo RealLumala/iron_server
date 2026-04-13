@@ -2,5 +2,25 @@
 name = "iron_server"
 version = "0.1.0"
 edition = "2024"
+authors = ["Senior Rust Engineer <dlumala20@gmail.com>"]
+description = "Full-stack async chat server + CLI client using Tokio"
+license = "MIT"
+repository = "https://github.com/yourusername/rust-chat-server"
+
+[[bin]]
+name = "chat-server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "chat-client"
+path = "src/bin/client.rs"
 
 [dependencies]
+tokio = { version = "1.44", features = ["full"] }
+tokio-util = { version = "0.7", features = ["codec"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+bytes = "1.10"
