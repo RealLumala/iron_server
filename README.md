@@ -15,6 +15,7 @@
 - Interactive CLI client
 - Excellent logging with `tracing`
 
+##
 ---
 
 ## Quick Start

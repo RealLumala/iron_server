@@ -107,7 +107,7 @@ async fn login(write: &mut tokio::io::WriteHalf<tokio::net::TcpStream>) -> Resul
     print!("Password: ");
     io::stdout().flush()?;
     let mut password = String::new();
-    io::stdin().read_line(&mut password)?;
+    io::stdin().read_line(&mut password)?; 
     let password = password.trim().to_string();
 
     let login_msg = Message::Login { username: username.clone(), password };
